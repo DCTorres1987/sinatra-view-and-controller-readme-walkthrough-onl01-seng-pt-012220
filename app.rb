@@ -19,5 +19,13 @@ class App < Sinatra::Base
 
   end
   
-  
+  get "/" do
+  @user = "Ian"
+ 
+  erb :index # @user will be defined as 'Ian' in the view
+  end
+ 
+  get "/profile" do
+  erb :profile # @user will be nil here
+  end
 end
